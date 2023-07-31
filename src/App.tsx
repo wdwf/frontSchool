@@ -1,16 +1,15 @@
-import * as Popover from "@radix-ui/react-popover";
+import ProviderInit from "./ProviderInit";
+import GlobalFonts from "./assets/fonts/fonts";
+import AppRoutes from "./router";
+import { GlobalStyle } from "./styles/themes/globalStyle";
 
 function App() {
   return (
-    <Popover.Root>
-      <Popover.Trigger>More info</Popover.Trigger>
-      <Popover.Portal>
-        <Popover.Content>
-          Some more info…
-          <Popover.Arrow />
-        </Popover.Content>
-      </Popover.Portal>
-    </Popover.Root>
+    <ProviderInit>
+      <GlobalStyle />
+      <GlobalFonts />
+      <AppRoutes />
+    </ProviderInit>
   );
 }
 
