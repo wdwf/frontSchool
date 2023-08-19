@@ -19,7 +19,6 @@ export default function NonAuthenticatedRoutes() {
         <Route path="/recoverpass" element={<RecoverPass />} />
         <Route path="/" element={<LandingPage />} />
 
-        <Route path="/" element={<LandingPage />} />
         <Route path="*" element={<Navigate to={"/landpage"} replace />} />
       </Routes>
     </Router>
