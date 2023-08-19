@@ -8,9 +8,14 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "PoppinsRegular";
     list-style: none;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   html, body #root {
     min-height: 100vh;
     font-size: 14px;
+    background-color: ${(props) => props.theme.colors.white[100]};
   }
 `;

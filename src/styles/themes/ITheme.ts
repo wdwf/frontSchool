@@ -10,9 +10,36 @@ interface ITheme {
     head_lg: string;
   };
   colors: {
-    black: string;
+    white: {
+      100: string;
+    };
+    yellow: {
+      100: string;
+    };
+    red: {
+      100: string;
+      200: string;
+    };
+    pink: {
+      100: string;
+      200: string;
+    };
+    black: {
+      100: string;
+      200: string;
+    };
+    purple: {
+      100: string;
+      200: string;
+      300: string;
+      400: string;
+    };
     gray: {
-      800: string;
+      100: string;
+      200: string;
+      300: string;
+      400: string;
+      500: string;
     };
   };
   device: {
