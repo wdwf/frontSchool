@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import lightTheme from "./styles/themes/default";
+import theme from "./styles/themes/default";
 import { ReactNode } from "react";
 
 interface ProviderInitProps {
@@ -7,7 +7,7 @@ interface ProviderInitProps {
 }
 
 const ProviderInit = ({ children }: ProviderInitProps) => {
-  return <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>;
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
 export default ProviderInit;
