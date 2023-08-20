@@ -7,6 +7,11 @@ export const Banner = styled.section`
   display: flex;
   padding: 0 16px 0 16px;
   padding-top: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  padding: 50px 100px 0 100px;
 
   .content {
     width: 100%;
@@ -32,6 +37,7 @@ export const Banner = styled.section`
       color: ${(props) => props.theme.colors.white[100]};
       margin-top: 16px;
       margin-bottom: 16px;
+      width: 90%;
     }
 
     a {
@@ -55,34 +61,13 @@ export const Banner = styled.section`
 
   .imageBanner {
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
 
     img {
-      width: 90%;
-    }
-  }
-
-  @media (${(props) => props.theme.device.laptopL}) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 80vh;
-    padding: 50px 100px 0 100px;
-
-    .content {
-      h2 {
-        width: 90%;
-      }
-    }
-
-    .imageBanner {
+      width: auto;
       height: 100%;
-      display: flex;
-      justify-content: end;
-
-      img {
-        width: auto;
-        height: 100%;
-      }
     }
   }
 

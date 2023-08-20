@@ -10,18 +10,15 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  padding: 0 100px;
 
-  @media (${(props) => props.theme.device.laptopL}) {
-    padding: 0 100px;
+  .btnMenu {
+    display: none;
+    cursor: pointer;
+  }
 
-    .btnMenu {
-      display: none;
-      cursor: pointer;
-    }
-
-    svg {
-      width: 100px;
-    }
+  svg {
+    width: 100px;
   }
 
   @media (${(props) => props.theme.device.tablet}) {
@@ -42,6 +39,31 @@ export const ListMenuSection = styled.ul`
   transition: all 0.5s ease;
   display: flex;
   overflow: hidden;
+  width: 100%;
+  position: initial;
+  flex-direction: row;
+  height: auto;
+  padding: 0;
+  margin-left: 15%;
+  gap: 42px;
+
+  & li {
+    padding: 0;
+    transition: none;
+    cursor: pointer;
+
+    a {
+      display: inline;
+      width: 100%;
+      height: 100%;
+      color: ${(props) => props.theme.colors.black[100]};
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
 
   &.open {
     width: 100%;
@@ -49,34 +71,6 @@ export const ListMenuSection = styled.ul`
 
   .btnActions {
     display: none;
-  }
-
-  @media (${(props) => props.theme.device.laptopL}) {
-    width: 100%;
-    position: initial;
-    flex-direction: row;
-    height: auto;
-    padding: 0;
-    margin-left: 15%;
-    gap: 42px;
-
-    & li {
-      padding: 0;
-      transition: none;
-      cursor: pointer;
-
-      a {
-        display: inline;
-        width: 100%;
-        height: 100%;
-        color: ${(props) => props.theme.colors.black[100]};
-        text-decoration: none;
-      }
-
-      &:hover {
-        background-color: transparent;
-      }
-    }
   }
 
   @media (${(props) => props.theme.device.tablet}) {
@@ -115,6 +109,10 @@ export const ListMenuSection = styled.ul`
 `;
 
 export const AccessPlatform = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 24px;
   width: 100%;
 
   button {
@@ -142,12 +140,6 @@ export const AccessPlatform = styled.div`
         color: ${(props) => props.theme.colors.white[100]};
       }
     }
-  }
-
-  @media (${(props) => props.theme.device.laptopL}) {
-    display: flex;
-    justify-content: end;
-    gap: 24px;
   }
 
   @media (${(props) => props.theme.device.tablet}) {
